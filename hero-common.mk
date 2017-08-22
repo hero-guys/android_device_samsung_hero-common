@@ -73,6 +73,11 @@ PRODUCT_PACKAGES += \
     libion \
     libfimg
 
+# Camera
+PRODUCT_PACKAGES += \
+    camera.exynos5 \
+    Snap
+
 # Radio
 PRODUCT_PACKAGES += \
     libxml2 \
