@@ -73,10 +73,6 @@ PRODUCT_PACKAGES += \
     libion \
     libfimg
 
-# hardware/samsung/AdvancedDisplay (MDNIE)
-PRODUCT_PACKAGES += \
-    AdvancedDisplay
-
 # Radio
 PRODUCT_PACKAGES += \
     libxml2 \
