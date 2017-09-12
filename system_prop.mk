@@ -47,3 +47,55 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # sdcardfs
 PRODUCT_PROPERTY_OVERRIDES += \
 	ro.sys.sdcardfs=true
+
+# Audio
+PRODUCT_PROPERTY_OVERRIDES += \
+	af.fast_track_multiplier=1 \
+	audio_hal.force_voice_config=wide
+
+# Bluetooth workaround:
+# The new CAF code defaults to MCT HAL, but we
+# need the old H4 HAL for our Broadcom WiFi.
+PRODUCT_PROPERTY_OVERRIDES += \
+	qcom.bluetooth.soc=rome
+
+PRODUCT_PROPERTY_OVERRIDES += \
+	ro.bt.bdaddr_path="/efs/bluetooth/bt_addr"
+
+# Properties
+PRODUCT_PROPERTY_OVERRIDES += \
+	ro.bq.gpu_to_cpu_unsupported=1 \
+	ro.opengles.version=196609 \
+	debug.hwc.force_gpu=1 \
+	ro.bq.gpu_to_cpu_unsupported=1 \
+	ro.opengles.version=196609 \
+	ro.sf.lcd_density=560
+
+# Properties - HWC - not used on cm/aosp
+PRODUCT_PROPERTY_OVERRIDES += \
+	debug.hwc.winupdate=1 \
+	debug.hwc.otf=1
+
+# NFC
+PRODUCT_PROPERTY_OVERRIDES += \
+	ro.nfc.sec_hal=true \
+	ro.nfc.port="I2C"
+
+# Radio
+PRODUCT_PROPERTY_OVERRIDES += \
+	persist.radio.add_power_save=1 \
+	persist.radio.apm_sim_not_pwdn=1 \
+	rild.libpath=/system/lib64/libsec-ril.so \
+	rild.libpath2=/system/lib64/libsec-ril-dsds.so \
+	ro.telephony.default_network=9 \
+	ro.telephony.ril_class=SlteRIL \
+	ro.ril.gprsclass=10 \
+	ro.ril.hsxpa=1 \
+	ro.ril.telephony.mqanelements=6 \
+	telephony.lteOnGsmDevice=1 \
+	telephony.lteOnCdmaDevice=0
+
+# WIFI
+PRODUCT_PROPERTY_OVERRIDES += \
+	wifi.interface=wlan0
+
