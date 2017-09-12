@@ -27,9 +27,6 @@ TARGET_BOOTLOADER_BOARD_NAME := universal8890
 TARGET_NO_BOOTLOADER := true
 TARGET_NO_RADIOIMAGE := true
 
-# Audio HAL variant
-TARGET_AUDIOHAL_VARIANT := samsung
-
 # Binder
 TARGET_USES_64_BIT_BINDER := true
 
@@ -105,8 +102,8 @@ USE_OPENGL_RENDERER := true
 NUM_FRAMEBUFFER_SURFACE_BUFFERS := 3
 
 # Hardware
-BOARD_HARDWARE_CLASS += device/samsung/hero-common/cmhw
 BOARD_HARDWARE_CLASS += hardware/samsung/cmhw
+BOARD_HARDWARE_CLASS += device/samsung/hero-common/cmhw
 
 # Bluetooth
 BOARD_HAVE_BLUETOOTH := true
@@ -129,6 +126,9 @@ EXTENDED_FONT_FOOTPRINT := true
 
 # Packaging
 BLOCK_BASED_OTA := true
+
+# Power Hal
+TARGET_POWERHAL_VARIANT := samsung
 
 # Properties
 TARGET_SYSTEM_PROP := device/samsung/hero-common/system.prop

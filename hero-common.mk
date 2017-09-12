@@ -40,7 +40,7 @@ TARGET_SCREEN_WIDTH := 1440
 
 # Power
 PRODUCT_PACKAGES += \
-	power.exynos5
+	power.universal8890
 
 # Lights
 PRODUCT_PACKAGES += \
@@ -67,18 +67,18 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
 	dtbhtoolExynos
 
-DEVICE_PATH := device/samsung/hero-common
-
 # Audio
 PRODUCT_COPY_FILES += \
 	$(DEVICE_PATH)/configs/audio/audio_policy.conf:system/etc/audio_policy.conf \
-	$(DEVICE_PATH)/configs/audio/mixer_paths_0.xml:system/etc/mixer_paths_0.xml
+	$(DEVICE_PATH)/configs/audio/audio_effects.conf:system/etc/audio_effects.conf \
+	$(DEVICE_PATH)/configs/audio/mixer_paths.xml:system/etc/mixer_paths.xml
 
 PRODUCT_PACKAGES += \
 	audio.a2dp.default \
 	audio.usb.default \
 	audio.r_submix.default \
-	audio.primary.universal8890
+	audio.primary.universal8890 \
+	libtinycompress
 
 # Bluetooth
 PRODUCT_PACKAGES += \
