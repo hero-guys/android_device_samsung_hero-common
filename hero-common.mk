@@ -128,7 +128,8 @@ PRODUCT_COPY_FILES += \
 
 # Camera
 PRODUCT_PACKAGES += \
-    Snap
+	camera.exynos5 \
+	Snap
 
 # Fingerprint
 PRODUCT_PACKAGES += \
