@@ -22,7 +22,7 @@ PRODUCT_PACKAGES += \
 	fstab.samsungexynos8890 \
 	init.samsung.rc \
 	init.samsungexynos8890.rc \
-	ueventd.samsungexynos8890.rc \
+	ueventd.samsungexynos8890.rc
 
 # Graphics
 # This device is xhdpi.  However the platform doesn't
