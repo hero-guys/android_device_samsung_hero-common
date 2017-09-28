@@ -25,19 +25,18 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Hwui
 PRODUCT_PROPERTY_OVERRIDES += \
-	ro.hwui.texture_cache_size=88 \
-	ro.hwui.layer_cache_size=58 \
-	ro.hwui.path_cache_size=16 \
-	ro.hwui.texture_cache_flushrate=0.4 \
-	ro.hwui.shape_cache_size=4 \
-	ro.hwui.gradient_cache_size=2 \
-	ro.hwui.drop_shadow_cache_size=6 \
-	ro.hwui.r_buffer_cache_size=8 \
-	ro.hwui.text_small_cache_width=1024 \
-	ro.hwui.text_small_cache_height=1024 \
-	ro.hwui.text_large_cache_width=4096 \
-	ro.hwui.text_large_cache_height=2048 \
-	ro.hwui.fbo_cache_size=16
+    ro.hwui.use_gpu_pixel_buffers=true \
+    ro.hwui.texture_cache_size=176 \
+    ro.hwui.layer_cache_size=106 \
+    ro.hwui.path_cache_size=64 \
+    ro.hwui.shape_cache_size=16 \
+    ro.hwui.gradient_cache_size=8 \
+    ro.hwui.drop_shadow_cache_size=24 \
+    ro.hwui.r_buffer_cache_size=24 \
+    ro.hwui.text_small_cache_width=4096 \
+    ro.hwui.text_small_cache_height=4096 \
+    ro.hwui.text_large_cache_width=8192 \
+    ro.hwui.text_large_cache_height=8192
 
 # Network
 # Define default initial receive window size in segments.
@@ -62,17 +61,17 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
 	ro.bt.bdaddr_path="/efs/bluetooth/bt_addr"
 
-# Properties
+# Graphics
 PRODUCT_PROPERTY_OVERRIDES += \
-	ro.bq.gpu_to_cpu_unsupported=1 \
+	debug.composition.type=dyn \
 	ro.opengles.version=196610 \
-	ro.sf.lcd_density=560 \
-	debug.hwc.force_gpu=1
-
-# Properties - HWC - not used on cm/aosp
-PRODUCT_PROPERTY_OVERRIDES += \
-	debug.hwc.winupdate=1 \
-	debug.hwc.otf=1
+	video.accelerate.hw=1 \
+	debug.egl.profiler=1 \
+	ro.sf.lcd_density=640 \
+	debug.hwc.max_hw_overlays=0 \
+	debug.sf.hw=1 \
+	persist.sys.ui.hw=1 \
+	debug.egl.hw=1
 
 # NFC
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -97,3 +96,18 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
 	wifi.interface=wlan0
 
+# Performance += \
+PRODUCT_PROPERTY_OVERRIDES += \
+	debug.performance.tuning=1
+
+# Power-Management
+PRODUCT_PROPERTY_OVERRIDES += \
+	pm.sleep_mode=1
+	
+# Surface
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.sys.scrollingcache=1 \
+    persist.sys.purgeable_assets=1 \
+    ro.compcache.default=18 \
+    ro.max.fling_velocity=12000 \
+    ro.min.fling_velocity=8000

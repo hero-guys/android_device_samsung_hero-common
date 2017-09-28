@@ -105,6 +105,9 @@ NUM_FRAMEBUFFER_SURFACE_BUFFERS := 3
 BOARD_HARDWARE_CLASS += hardware/samsung/cmhw
 BOARD_HARDWARE_CLASS += device/samsung/hero-common/cmhw
 
+# HWCServices
+BOARD_USES_HWC_SERVICES := true
+
 # Bluetooth
 BOARD_HAVE_BLUETOOTH := true
 BOARD_HAVE_BLUETOOTH_BCM := true
