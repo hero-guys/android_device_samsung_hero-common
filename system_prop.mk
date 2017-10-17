@@ -68,10 +68,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
 	video.accelerate.hw=1 \
 	debug.egl.profiler=1 \
 	ro.sf.lcd_density=640 \
-	debug.hwc.max_hw_overlays=0 \
 	debug.sf.hw=1 \
-	persist.sys.ui.hw=1 \
-	debug.egl.hw=1
+	debug.egl.hw=1 \
+	debug.hwc.force_gpu=0 \
+	debug.hwc.max_hw_overlays=1 \
+	persist.sys.ui.hw=true
 
 # NFC
 PRODUCT_PROPERTY_OVERRIDES += \
