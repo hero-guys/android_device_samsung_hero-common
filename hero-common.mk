@@ -40,7 +40,7 @@ TARGET_SCREEN_WIDTH := 1440
 
 # Power
 PRODUCT_PACKAGES += \
-	power.exynos5
+	power.universal8890
 
 # Lights
 PRODUCT_PACKAGES += \
@@ -147,7 +147,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
 	libfimg \
 	libion \
-	gralloc.exynos5
+	gralloc.exynos5 \
+	hwcomposer.exynos5
 
 # Input
 PRODUCT_COPY_FILES += \
