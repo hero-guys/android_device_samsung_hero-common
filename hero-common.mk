@@ -147,7 +147,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
 	libfimg \
 	libion \
-	gralloc.exynos5 \
 	hwcomposer.exynos5
 
 # Input
