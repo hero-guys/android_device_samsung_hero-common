@@ -61,17 +61,20 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
 	ro.bt.bdaddr_path="/efs/bluetooth/bt_addr"
 
+# Compositing
+	PRODUCT_PROPERTY_OVERRIDES += \
+	debug.composition.type=gpu \
+	ro.opengles.version=196610 \
+	video.accelerate.hw=1
+
 # Graphics
 PRODUCT_PROPERTY_OVERRIDES += \
-	debug.composition.type=dyn \
-	ro.opengles.version=196610 \
-	video.accelerate.hw=1 \
-	debug.egl.profiler=1 \
 	ro.sf.lcd_density=640 \
-	debug.sf.hw=1 \
-	debug.egl.hw=1 \
 	debug.hwc.force_gpu=0 \
-	debug.hwc.max_hw_overlays=1 \
+	debug.hwc.max_hw_overlays=0 \
+	debug.egl.hw=1 \
+	debug.sf.enable_hwc_vds=1 \
+	debug.sf.hw=1 \
 	persist.sys.ui.hw=true
 
 # NFC
