@@ -11,6 +11,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
   dtbhtoolExynos
 
+# File system
+PRODUCT_PACKAGES += \
+  fstab.samsungexynos8890
+
 # Property overrides
 -include $(LOCAL_PATH)/system_prop.mk
 
