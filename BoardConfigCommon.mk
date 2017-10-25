@@ -77,6 +77,26 @@ BOARD_FLASH_BLOCK_SIZE := 131072
 # File system
 TARGET_USERIMAGES_USE_EXT4 := true
 
+# Recovery
+BOARD_HAS_DOWNLOAD_MODE := true
+TARGET_RECOVERY_PIXEL_FORMAT := "ABGR_8888"
+TARGET_RECOVERY_FSTAB := device/samsung/hero-common/rootdir/etc/fstab.samsungexynos8890
+
+# Recovery (TWRP)
+ifeq ($(RECOVERY_VARIANT),twrp)
+RECOVERY_SDCARD_ON_DATA := true
+TW_THEME := portrait_hdpi
+TW_BRIGHTNESS_PATH := "/sys/class/backlight/panel/brightness"
+TW_DEFAULT_BRIGHTNESS := 180
+TW_MAX_BRIGHTNESS := 255
+TW_HAS_DOWNLOAD_MODE := true
+TW_NO_REBOOT_BOOTLOADER := true
+TW_INCLUDE_CRYPTO := true
+TW_INCLUDE_NTFS_3G := true
+TW_EXCLUDE_SUPERSU := true
+TW_EXTRA_LANGUAGES := true
+endif
+
 # Inherit SLSI specific defines
 ifeq ($(WITH_SLSI_BSP),true)
 -include $(LOCAL_PATH)/BoardConfigSLSI.mk
