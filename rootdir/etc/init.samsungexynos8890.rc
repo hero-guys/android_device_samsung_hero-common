@@ -2,6 +2,7 @@ import init.samsungexynos8890.usb.rc
 import init.baseband.rc
 import init.wifi.rc
 import init.gps.rc
+import init.samsung.rc
 
 on early-init
     mount debugfs /sys/kernel/debug /sys/kernel/debug
