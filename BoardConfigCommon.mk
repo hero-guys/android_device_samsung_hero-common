@@ -75,5 +75,8 @@ BOARD_USERDATAIMAGE_PARTITION_SIZE := 27044872192
 BOARD_CACHEIMAGE_PARTITION_SIZE    := 209715200
 BOARD_FLASH_BLOCK_SIZE := 131072
 
+# File system
+TARGET_USERIMAGES_USE_EXT4 := true
+
 # Inherit from the proprietary version
 -include vendor/samsung/hero-common/BoardConfigVendor.mk
