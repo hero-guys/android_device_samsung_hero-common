@@ -7,6 +7,10 @@ LOCAL_PATH := device/samsung/hero-common
 PRODUCT_PACKAGES += \
   frameworks/native/data/etc/handheld_core_hardware.xml:system/etc/permissions/handheld_core_hardware.xml
 
+# Image
+PRODUCT_PACKAGES += \
+  dtbhtoolExynos
+
 # Property overrides
 -include $(LOCAL_PATH)/system_prop.mk
 
