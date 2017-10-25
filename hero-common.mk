@@ -15,6 +15,17 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
   fstab.samsungexynos8890
 
+# Init resources
+PRODUCT_PACKAGES += \
+  init.samsungexynos8890.rc \
+  init.samsungexynos8890.usb.rc \
+  init.samsung.rc \
+  init.baseband.rc \
+  init.gps.rc \
+  init.rilchip.rc \
+  init.wifi.rc \
+  ueventd.samsungexynos8890.rc
+
 # Property overrides
 -include $(LOCAL_PATH)/system_prop.mk
 
