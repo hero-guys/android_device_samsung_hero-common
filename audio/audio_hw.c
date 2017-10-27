@@ -466,35 +466,23 @@ static void select_devices(struct audio_device *adev)
 /* must be called with the hw device mutex locked, OK to hold other mutexes */
 static void start_bt_sco(struct audio_device *adev)
 {
-    struct pcm_config *sco_config;
-    
-    if (adev->pcm_sco_rx != NULL || adev->pcm_sco_tx != NULL) {
+    if (adev->pcm_sco_rx || adev->pcm_sco_tx) {
         ALOGW("%s: SCO PCMs already open!\n", __func__);
         return;
     }
 
     ALOGV("%s: Opening SCO PCMs", __func__);
-    
-    if (adev->wb_amr) {
-        sco_config = &pcm_config_sco_wide;
-    } else {
-        sco_config = &pcm_config_sco;
-    }
-    
-    adev->pcm_sco_rx = pcm_open(PCM_CARD,
-                                PCM_DEVICE_SCO,
-                                PCM_OUT | PCM_MONOTONIC,
-                                sco_config);
-    if (adev->pcm_sco_rx != NULL && !pcm_is_ready(adev->pcm_sco_rx)) {
+
+    adev->pcm_sco_rx = pcm_open(PCM_CARD, PCM_DEVICE_SCO, PCM_OUT | PCM_MONOTONIC,
+            &pcm_config_sco);
+    if (adev->pcm_sco_rx && !pcm_is_ready(adev->pcm_sco_rx)) {
         ALOGE("%s: cannot open PCM SCO RX stream: %s",
               __func__, pcm_get_error(adev->pcm_sco_rx));
         goto err_sco_rx;
     }
 
-    adev->pcm_sco_tx = pcm_open(PCM_CARD,
-                                PCM_DEVICE_SCO,
-                                PCM_IN | PCM_MONOTONIC,
-                                sco_config);
+    adev->pcm_sco_tx = pcm_open(PCM_CARD, PCM_DEVICE_SCO, PCM_IN,
+            &pcm_config_sco);
     if (adev->pcm_sco_tx && !pcm_is_ready(adev->pcm_sco_tx)) {
         ALOGE("%s: cannot open PCM SCO TX stream: %s",
               __func__, pcm_get_error(adev->pcm_sco_tx));
@@ -514,17 +502,18 @@ err_sco_rx:
     adev->pcm_sco_rx = NULL;
 }
 
-/* must be called with the hw device mutex locked, OK to hold other mutexes */
-static void stop_bt_sco(struct audio_device *adev) {
+/* must be called with hw device mutex locked, OK to hold other mutexes */
+static void end_bt_sco(struct audio_device *adev)
+{
     ALOGV("%s: Closing SCO PCMs", __func__);
 
-    if (adev->pcm_sco_rx != NULL) {
+    if (adev->pcm_sco_rx) {
         pcm_stop(adev->pcm_sco_rx);
         pcm_close(adev->pcm_sco_rx);
         adev->pcm_sco_rx = NULL;
     }
 
-    if (adev->pcm_sco_tx != NULL) {
+    if (adev->pcm_sco_tx) {
         pcm_stop(adev->pcm_sco_tx);
         pcm_close(adev->pcm_sco_tx);
         adev->pcm_sco_tx = NULL;
@@ -621,11 +610,9 @@ static void stop_voice_call(struct audio_device *adev)
         status++;
     }
 
-    /* End SCO stream if needed */
-    if (adev->out_device & AUDIO_DEVICE_OUT_ALL_SCO) {
-        stop_bt_sco(adev);
-        status++;
-    }
+    /* end SCO stream if needed */
+    if (adev->out_device & AUDIO_DEVICE_OUT_ALL_SCO)
+        end_bt_sco(adev);
 
     ALOGV("%s: Successfully closed %d active PCMs", __func__, status);
 }
