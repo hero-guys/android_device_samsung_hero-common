@@ -67,6 +67,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
 	ro.opengles.version=196609 \
 	video.accelerate.hw=1
 
+# Camera Hacks
+	camera2.portability.force_api=1
+
 # Graphics
 PRODUCT_PROPERTY_OVERRIDES += \
 	ro.sf.lcd_density=560 \
@@ -106,7 +109,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Power-Management
 PRODUCT_PROPERTY_OVERRIDES += \
 	pm.sleep_mode=1
-	
+
 # Surface
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.sys.scrollingcache=1 \
