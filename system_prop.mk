@@ -63,15 +63,14 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Compositing
 	PRODUCT_PROPERTY_OVERRIDES += \
-	debug.composition.type=gpu \
-	ro.opengles.version=196610 \
+	debug.composition.type=dyn \
+	ro.opengles.version=196609 \
 	video.accelerate.hw=1
 
 # Graphics
 PRODUCT_PROPERTY_OVERRIDES += \
-	ro.sf.lcd_density=640 \
-	debug.hwc.force_gpu=0 \
-	debug.hwc.max_hw_overlays=0 \
+	ro.sf.lcd_density=560 \
+	debug.hwc.max_hw_overlays=4 \
 	debug.egl.hw=1 \
 	debug.sf.enable_hwc_vds=1 \
 	debug.sf.hw=1 \
