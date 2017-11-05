@@ -71,6 +71,23 @@ PRODUCT_COPY_FILES += \
   frameworks/av/media/libstagefright/data/media_codecs_google_telephony.xml:system/etc/media_codecs_google_telephony.xml \
   frameworks/av/media/libstagefright/data/media_codecs_google_video.xml:system/etc/media_codecs_google_video.xml
 
+# Wi-Fi
+PRODUCT_PACKAGES += \
+  macloader \
+  wifiloader \
+  hostapd \
+  libwpa_client \
+  wpa_supplicant
+PRODUCT_COPY_FILES += \
+  $(LOCAL_PATH)/configs/wifi/cred.conf:system/etc/wifi/cred.conf \
+  $(LOCAL_PATH)/configs/wifi/hostapd.conf:system/etc/wifi/hostapd.conf \
+  $(LOCAL_PATH)/configs/wifi/p2p_supplicant.conf:system/etc/wifi/p2p_supplicant.conf \
+  $(LOCAL_PATH)/configs/wifi/p2p_supplicant_overlay.conf:system/etc/wifi/p2p_supplicant_overlay.conf \
+  $(LOCAL_PATH)/configs/wifi/wpa_supplicant.conf:system/etc/wifi/wpa_supplicant.conf \
+  $(LOCAL_PATH)/configs/wifi/wpa_supplicant_overlay.conf:system/etc/wifi/wpa_supplicant_overlay.conf \
+  frameworks/native/data/etc/android.hardware.wifi.direct.xml:system/etc/permissions/android.hardware.wifi.direct.xml \
+  frameworks/native/data/etc/android.hardware.wifi.xml:system/etc/permissions/android.hardware.wifi.xml
+
 # Property overrides
 -include $(LOCAL_PATH)/system_prop.mk
 
