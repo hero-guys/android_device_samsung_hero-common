@@ -1,3 +1,37 @@
 # Copyright (C) 2017 The LineageOS Project
 # SPDX-License-Identifier: Apache-2.0
 # Proprietary file list (SLSI)
+
+# Display
+lib/hw/gralloc.exynos5.so
+lib64/hw/gralloc.exynos5.so
+
+# H/W composer
+lib/hw/hwcomposer.exynos5.so
+lib64/hw/hwcomposer.exynos5.so
+lib/libExynosHWCService.so
+lib64/libExynosHWCService.so
+lib/libexynosv4l2.so
+lib64/libexynosv4l2.so
+lib/libexynosutils.so
+lib64/libexynosutils.so
+lib/libhwcutils.so
+lib64/libhwcutils.so
+lib/libdisplay.so
+lib64/libdisplay.so
+lib/libhdmi.so
+lib64/libhdmi.so
+lib/libmpp.so
+lib64/libmpp.so
+
+# Scaler
+lib/libcsc.so
+lib64/libcsc.so
+lib/libexynosscaler.so
+lib64/libexynosscaler.so
+lib/libexynosgscaler.so
+lib64/libexynosgscaler.so
+
+# FIMG
+lib/libfimg.so
+lib64/libfimg.so

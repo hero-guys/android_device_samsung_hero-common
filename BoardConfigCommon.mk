@@ -103,6 +103,17 @@ BOARD_CHARGER_ENABLE_SUSPEND := true
 BOARD_CHARGER_SHOW_PERCENTAGE := true
 CHARGING_ENABLED_PATH := /sys/class/power_supply/battery/batt_lp_charging
 
+# Display
+TARGET_SCREEN_HEIGHT := 2560
+TARGET_SCREEN_WIDTH := 1440
+BOARD_EGL_CFG := device/samsung/hero-common/configs/egl.cfg
+
+# H/W composer
+BOARD_USES_HWC_SERVICES := true
+ifneq ($(WITH_SLSI_BSP),true)
+BOARD_USES_HWC_SERVICES_BLOB := true
+endif
+
 # Inherit SLSI specific defines
 ifeq ($(WITH_SLSI_BSP),true)
 -include $(LOCAL_PATH)/BoardConfigSLSI.mk
