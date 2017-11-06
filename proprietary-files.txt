@@ -155,3 +155,17 @@ etc/wifi/nvram_net.txt_wisol_b1
 etc/wifi/nvram_net.txt_wisol_c0
 vendor/firmware/bcm4359C0_V0118.0172_murata.hcd
 vendor/firmware/bcm4359C0_V0118.0173_semco.hcd
+
+# Radio
+bin/rild
+lib/libreference-ril.so
+lib64/libreference-ril.so
+lib/libril.so
+lib64/libril.so
+lib/libsec-ril.so
+lib64/libsec-ril.so
+lib/libsec-ril-dsds.so
+lib64/libsec-ril-dsds.so
+lib/libsecnativefeature.so
+lib64/libsecnativefeature.so
+-sbin/cbd:rootfs

@@ -140,6 +140,9 @@ BOARD_HAVE_BLUETOOTH_BCM := true
 BOARD_HAVE_SAMSUNG_BLUETOOTH := true
 BOARD_CUSTOM_BT_CONFIG := $(LOCAL_PATH)/configs/bluetooth/libbt_vndcfg.txt
 
+# Radio
+BOARD_RIL_CLASS := ../../../$(LOCAL_PATH)/ril
+
 # Inherit SLSI specific defines
 ifeq ($(WITH_SLSI_BSP),true)
 -include $(LOCAL_PATH)/BoardConfigSLSI.mk
