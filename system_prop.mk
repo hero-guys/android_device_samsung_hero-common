@@ -35,3 +35,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
   af.fast_track_multiplier=1 \
   audio_hal.force_voice_config=wide
+
+# Bluetooth
+PRODUCT_PROPERTY_OVERRIDES += \
+  ro.bt.bdaddr_path="/efs/bluetooth/bt_addr" \
+  qcom.bluetooth.soc=rome
