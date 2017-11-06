@@ -93,6 +93,13 @@ PRODUCT_COPY_FILES += \
   $(LOCAL_PATH)/configs/bluetooth/bt_vendor.conf:system/etc/bluetooth/bt_vendor.conf \
   frameworks/native/data/etc/android.hardware.bluetooth_le.xml:system/etc/permissions/android.hardware.bluetooth_le.xml
 
+# Radio
+PRODUCT_PACKAGES += \
+  libxml2 \
+  libprotobuf-cpp-full
+PRODUCT_COPY_FILES += \
+  frameworks/native/data/etc/android.hardware.telephony.gsm.xml:system/etc/permissions/android.hardware.telephony.gsm.xml
+
 # Property overrides
 -include $(LOCAL_PATH)/system_prop.mk
 

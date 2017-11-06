@@ -1,1 +1,4 @@
 # device specific properties
+
+# read DS/SS property
+import /efs/factory.prop
