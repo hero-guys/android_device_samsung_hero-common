@@ -1,4 +1,4 @@
-R#
+#
 # Copyright (C) 2017 Fernando Von Arx <fer.vonarx@gmail.com>
 # Copyright (C) 2017 Jesse Chan <cjx123@outlook.com>
 #
