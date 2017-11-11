@@ -8,8 +8,14 @@ PRODUCT_PACKAGES += \
 # Packages
 PRODUCT_PACKAGES += \
 	libxml2 \
+	rild \
+	libreference-ril \
+	libril \
 	libprotobuf-cpp-full \
-	libsecril-client
+	libsecril-client \
+	android.hardware.radio@1.0 \
+	android.hardware.radio.deprecated@1.0 \
+	modemloader
 
 # Permissions
 PRODUCT_COPY_FILES += \
@@ -27,4 +33,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 	ro.ril.hsxpa=1 \
 	ro.ril.telephony.mqanelements=6 \
 	telephony.lteOnGsmDevice=1 \
-	telephony.lteOnCdmaDevice=0
+	telephony.lteOnCdmaDevice=0 \
+	ro.telephony.get_imsi_from_sim=true \
+	ro.ril.force_eri_from_xml=true \
+	net.tethering.noprovisioning=true 

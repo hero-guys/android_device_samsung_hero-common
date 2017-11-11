@@ -146,6 +146,8 @@ on boot
     chmod 755 /sys/kernel/debug
     chown system system /sys/kernel/debug
 
+    export LD_SHIM_LIBS "/system/bin/gpsd|/system/lib64/gpsd_shim.so"
+
     # Set up kernel tracing, but disable it by default
     chmod 0222 /sys/kernel/debug/tracing/trace_marker
     write /sys/kernel/debug/tracing/tracing_on 0
@@ -289,16 +291,16 @@ on boot
     chown system radio /sys/class/sec/switch/afc_disable
 
 # Bluetooth
-    chown bluetooth net_bt_stack /dev/ttySAC1
+    chown bluetooth bluetooth /dev/ttySAC1
     chmod 0660 /dev/ttySAC1
     # permissions for bluetooth.
     setprop ro.bt.bdaddr_path "/efs/bluetooth/bt_addr"
-    chown bluetooth net_bt_stack ro.bt.bdaddr_path
-    chown radio net_bt_stack /efs/bluetooth/bt_addr
+    chown bluetooth bluetooth ro.bt.bdaddr_path
+    chown radio bluetooth /efs/bluetooth/bt_addr
     chmod 0640 /efs/bluetooth/bt_addr
     chmod 0660 /sys/class/rfkill/rfkill0/state
-    chown bluetooth net_bt_stack /sys/class/rfkill/rfkill0/state
-    chown bluetooth net_bt_stack /sys/class/rfkill/rfkill0/type
+    chown bluetooth bluetooth /sys/class/rfkill/rfkill0/state
+    chown bluetooth bluetooth /sys/class/rfkill/rfkill0/type
 
 #for datarouter
     chown system system /dev/dun
@@ -643,12 +645,6 @@ on fs
     chown system system /sys/class/rtc/rtc0/device/adc_reg_7
     chown system system /sys/class/rtc/rtc0/device/adc_ctrl1
 
-# FINGERPRINT FRAMEWORK : starts fingerprintd
-service fingerprintd /system/bin/fingerprintd
-    class late_start
-    user system
-    group system
-
 #~ # Copy DRM Key
     #~ copy /system/app/wv.keys /factory/wv.keys
 
@@ -682,6 +678,12 @@ on property:ro.debuggable=1
 on property:ro.bootmode=charger
     wait /dev/block/platform/155a0000.ufs/by-name/EFS
     mount ext4 /dev/block/platform/155a0000.ufs/by-name/EFS /efs nosuid nodev noatime noauto_da_alloc,discard,journal_async_commit,errors=panic
+
+# cpufreq parameters
+/sys/devices/system/cpu/cpu*   cpufreq/scaling_governor         0664    system  system
+/sys/devices/system/cpu/cpu*   cpufreq/scaling_max_freq         0664    system  system
+/sys/devices/system/cpu/cpu*   cpufreq/scaling_min_freq         0664    system  system
+
 
 on charger
 # Set cpu governor to powersave while in charging mode

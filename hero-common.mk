@@ -64,7 +64,8 @@ TARGET_SCREEN_WIDTH := 1440
 ###########################################################
 
 PRODUCT_PACKAGES += \
-	power.exynos5
+	power.exynos5 \
+	android.hardware.power@1.0-impl
 
 ###########################################################
 ### LIGHTS

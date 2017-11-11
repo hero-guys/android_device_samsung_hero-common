@@ -1,4 +1,4 @@
-#
+R#
 # Copyright (C) 2017 Fernando Von Arx <fer.vonarx@gmail.com>
 # Copyright (C) 2017 Jesse Chan <cjx123@outlook.com>
 #
@@ -55,13 +55,13 @@ LOCAL_SRC_FILES		:= init.gps.rc
 LOCAL_MODULE_PATH	:= $(TARGET_ROOT_OUT)
 include $(BUILD_PREBUILT)
 
-include $(CLEAR_VARS)
-LOCAL_MODULE		:= init.rilchip.rc
-LOCAL_MODULE_TAGS	:= optional eng
-LOCAL_MODULE_CLASS	:= BOOT
-LOCAL_SRC_FILES		:= init.rilchip.rc
-LOCAL_MODULE_PATH	:= $(TARGET_ROOT_OUT)
-include $(BUILD_PREBUILT)
+#include $(CLEAR_VARS)
+#LOCAL_MODULE		:= init.rilchip.rc
+#LOCAL_MODULE_TAGS	:= optional eng
+#LOCAL_MODULE_CLASS	:= BOOT
+#LOCAL_SRC_FILES		:= init.rilchip.rc
+#LOCAL_MODULE_PATH	:= $(TARGET_ROOT_OUT)
+#include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
 LOCAL_MODULE		:= init.rilcommon.rc
