@@ -49,6 +49,9 @@ TARGET_CUSTOM_DTBTOOL := dtbhtoolExynos
 # Packaging
 BLOCK_BASED_OTA := false
 
+# Build
+PRODUCT_SKIP_FINGERPRINT_FROM_FILE := true
+
 # Properties
 TARGET_SYSTEM_PROP := device/samsung/hero-common/system.prop
 
