@@ -41,6 +41,17 @@ PRODUCT_COPY_FILES += \
   frameworks/native/data/etc/android.hardware.vulkan.level-0.xml:system/etc/permissions/android.hardware.vulkan.level.xml \
   frameworks/native/data/etc/android.hardware.vulkan.version-1_0_3.xml:system/etc/permissions/android.hardware.vulkan.version.xml
 
+# Audio
+PRODUCT_PACKAGES += \
+  audio.a2dp.default \
+  audio.usb.default \
+  audio.r_submix.default \
+  audio.primary.universal8890
+PRODUCT_COPY_FILES += \
+  $(LOCAL_PATH)/configs/audio/audio_policy.conf:system/etc/audio_policy.conf \
+  $(LOCAL_PATH)/configs/audio/mixer_paths_0.xml:system/etc/mixer_paths_0.xml \
+  frameworks/native/data/etc/android.hardware.audio.low_latency.xml:system/etc/permissions/android.hardware.audio.low_latency.xml
+
 # Property overrides
 -include $(LOCAL_PATH)/system_prop.mk
 

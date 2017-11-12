@@ -30,3 +30,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
   dalvik.vm.heaptargetutilization=0.75 \
   dalvik.vm.heapminfree=2m \
   dalvik.vm.heapmaxfree=8m
+
+# Audio
+PRODUCT_PROPERTY_OVERRIDES += \
+  af.fast_track_multiplier=1 \
+  audio_hal.force_voice_config=wide

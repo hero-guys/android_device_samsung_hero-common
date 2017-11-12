@@ -114,6 +114,9 @@ ifneq ($(WITH_SLSI_BSP),true)
 BOARD_USES_HWC_SERVICES_BLOB := true
 endif
 
+# Audio
+TARGET_AUDIOHAL_VARIANT := samsung
+
 # Inherit SLSI specific defines
 ifeq ($(WITH_SLSI_BSP),true)
 -include $(LOCAL_PATH)/BoardConfigSLSI.mk
