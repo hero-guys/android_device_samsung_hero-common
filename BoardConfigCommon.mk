@@ -128,5 +128,8 @@ BOARD_USES_SCALER_PREMUL_FMT := true
 BOARD_USES_SKIA_FIMGAPI := true
 BOARD_USES_FIMGAPI_V5X := true
 
+# Audio
+TARGET_AUDIOHAL_VARIANT := samsung
+
 # Inherit from the proprietary version
 -include vendor/samsung/hero-common/BoardConfigVendor.mk
