@@ -114,3 +114,7 @@ vendor/firmware/setfile_imx260.bin
 vendor/firmware/setfile_imx260_d.bin
 vendor/firmware/ois_fw_dom.bin
 vendor/firmware/ois_fw_sec.bin
+
+# Media
+vendor/firmware/mfc_fw.bin
+vendor/lib/mediadrm/libwvdrmengine.so
