@@ -117,6 +117,9 @@ endif
 # Audio
 TARGET_AUDIOHAL_VARIANT := samsung
 
+# Camera
+BOARD_USE_SAMSUNG_CAMERAFORMAT_NV21 := true
+
 # Inherit SLSI specific defines
 ifeq ($(WITH_SLSI_BSP),true)
 -include $(LOCAL_PATH)/BoardConfigSLSI.mk

@@ -35,3 +35,7 @@ lib64/libexynosgscaler.so
 # FIMG
 lib/libfimg.so
 lib64/libfimg.so
+
+# Camera
+lib/libhwjpeg.so
+lib64/libhwjpeg.so
