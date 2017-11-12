@@ -130,3 +130,39 @@ vendor/firmware/setfile_imx260.bin
 vendor/firmware/setfile_imx260_d.bin
 vendor/firmware/ois_fw_dom.bin
 vendor/firmware/ois_fw_sec.bin
+
+# Media
+vendor/firmware/mfc_fw.bin
+vendor/lib/mediadrm/libwvdrmengine.so
+
+# OpenMAX
+lib/libstagefrighthw.so
+lib64/libstagefrighthw.so
+lib/libExynosOMX_Core.so
+lib64/libExynosOMX_Core.so
+lib/libExynosOMX_Resourcemanager.so
+lib64/libExynosOMX_Resourcemanager.so
+
+# OpenMAX H/W encoder
+lib/omx/libOMX.Exynos.MPEG4.Encoder.so
+lib64/omx/libOMX.Exynos.MPEG4.Encoder.so
+lib/omx/libOMX.Exynos.AVC.Encoder.so
+lib64/omx/libOMX.Exynos.AVC.Encoder.so
+lib/omx/libOMX.Exynos.VP8.Encoder.so
+lib64/omx/libOMX.Exynos.VP8.Encoder.so
+lib/omx/libOMX.Exynos.HEVC.Encoder.so
+lib64/omx/libOMX.Exynos.HEVC.Encoder.so
+lib/omx/libOMX.Exynos.VP9.Encoder.so
+lib64/omx/libOMX.Exynos.VP9.Encoder.so
+
+# OpenMAX H/W decoder
+lib/omx/libOMX.Exynos.MPEG4.Decoder.so
+lib64/omx/libOMX.Exynos.MPEG4.Decoder.so
+lib/omx/libOMX.Exynos.AVC.Decoder.so
+lib64/omx/libOMX.Exynos.AVC.Decoder.so
+lib/omx/libOMX.Exynos.VP8.Decoder.so
+lib64/omx/libOMX.Exynos.VP8.Decoder.so
+lib/omx/libOMX.Exynos.HEVC.Decoder.so
+lib64/omx/libOMX.Exynos.HEVC.Decoder.so
+lib/omx/libOMX.Exynos.VP9.Decoder.so
+lib64/omx/libOMX.Exynos.VP9.Decoder.so
