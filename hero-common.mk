@@ -126,6 +126,12 @@ PRODUCT_COPY_FILES += \
   frameworks/native/data/etc/android.hardware.sensor.stepcounter.xml:system/etc/permissions/android.hardware.sensor.stepcounter.xml \
   frameworks/native/data/etc/android.hardware.sensor.stepdetector.xml:system/etc/permissions/android.hardware.sensor.stepdetector.xml
 
+# GPS
+PRODUCT_COPY_FILES += \
+  $(LOCAL_PATH)/configs/gps/gps.conf:system/etc/gps.conf \
+  $(LOCAL_PATH)/configs/gps/gps.xml:system/etc/gps.xml \
+  frameworks/native/data/etc/android.hardware.location.gps.xml:system/etc/permissions/android.hardware.location.gps.xml
+
 # Property overrides
 -include $(LOCAL_PATH)/system_prop.mk
 
