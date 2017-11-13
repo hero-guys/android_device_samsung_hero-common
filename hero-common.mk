@@ -26,6 +26,11 @@ PRODUCT_PACKAGES += \
   init.wifi.rc \
   ueventd.samsungexynos8890.rc
 
+# Charger
+PRODUCT_PACKAGES += \
+  charger_res_images \
+  cm_charger_res_images
+
 # Property overrides
 -include $(LOCAL_PATH)/system_prop.mk
 
