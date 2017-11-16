@@ -654,7 +654,6 @@ on fs
 # umount service
 service umount_service /system/bin/umount -D /preload
     disabled
-    seclabel u:r:umount_service:s0
     oneshot
 
 # Support Preload install apks

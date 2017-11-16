@@ -59,7 +59,6 @@ on boot
 # Run deferred initcalls of builtin kernel modules (bcmdhd)
 service wifiloader /system/bin/wifiloader
     class main
-    seclabel u:r:wifiloader:s0
     oneshot
 
 service p2p_supplicant /vendor/bin/hw/wpa_supplicant -iwlan0 -Dnl80211 -c/data/misc/wifi/wpa_supplicant.conf -I/system/etc/wifi/p2p_supplicant_overlay.conf -puse_p2p_group_interface=1p2p_device=1 -m/data/misc/wifi/p2p_supplicant.conf -e/data/misc/wifi/entropy.bin -g@android:wpa_wlan0
