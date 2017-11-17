@@ -18,6 +18,10 @@ PRODUCT_PACKAGES += \
 #	libion
 #	gralloc.exynos5
 
+# Not shims you are looking for
+PRODUCT_PACKAGES += \
+	libprocname
+
 # Permissions
 PRODUCT_COPY_FILES += \
 	frameworks/native/data/etc/android.hardware.vulkan.level-0.xml:system/etc/permissions/android.hardware.vulkan.level.xml \
