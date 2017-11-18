@@ -22,7 +22,7 @@
 #include <hardware/power.h>
 #include <hardware/hardware.h>
 
-static const char* process_name = "system_server";
+static const char* process_name = "unknown";
 
 extern "C" const char*
 get_process_name(void) {
