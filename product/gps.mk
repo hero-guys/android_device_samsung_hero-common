@@ -10,7 +10,7 @@ PRODUCT_PACKAGES += \
 	init.gps.rc
 
 PRODUCT_PACKAGES += \
-    gpsd_shim
+	libsensoreventq
 
 
 # Permissions
