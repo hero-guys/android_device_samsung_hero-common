@@ -13,11 +13,15 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-#include <hardware/hardware.h>
 
-static const char* process_name = "unknown";
-extern "C" const char*
-get_process_name(void) {
-  return process_name;
+#include <hardware_legacy/uevent.h>
+#include "seq.h"
+
+namespace android
+{
+ssize_t SensorEventQueue::read(ASensorEvent* events, unsigned long numEvents)
+	{
+		return this->read(events, static_cast<size_t>(numEvents));
+	}
 }
 
