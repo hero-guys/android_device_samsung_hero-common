@@ -13,6 +13,7 @@ PRODUCT_PACKAGES += \
 	libril \
 	libprotobuf-cpp-full \
 	libsecril-client \
+	libsecril-client-sap \
 	android.hardware.radio@1.0 \
 	android.hardware.radio.deprecated@1.0 \
 	modemloader
@@ -20,6 +21,10 @@ PRODUCT_PACKAGES += \
 # Permissions
 PRODUCT_COPY_FILES += \
 	frameworks/native/data/etc/android.hardware.telephony.gsm.xml:system/etc/permissions/android.hardware.telephony.gsm.xml
+
+# rild.rc
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/rild.rc:system/vendor/etc/init/rild.rc
 
 # Properties
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -31,6 +36,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
 	ro.telephony.ril_class=SlteRIL \
 	ro.ril.gprsclass=10 \
 	ro.ril.hsxpa=1 \
+	persist.data.netmgrd.qos.enable=false \
+	ro.use_data_netmgrd=false \
 	ro.ril.telephony.mqanelements=6 \
 	telephony.lteOnGsmDevice=1 \
 	telephony.lteOnCdmaDevice=0 \
