@@ -71,14 +71,14 @@ static int camera_device_open(const hw_module_t* module, const char* name,
 {
     int rv = -EINVAL;
 
-#    if (name != NULL) {
-#        if (check_vendor_module())
-#            return -EINVAL;
-#        rv = camera3_device_open(module, name, device);
-#    }
-#
-#    return rv;
-#}
+    if (name != NULL) {
+        if (check_vendor_module())
+            return -EINVAL;
+        rv = camera3_device_open(module, name, device);
+    }
+
+    return rv;
+}
 
 static int camera_get_number_of_cameras(void)
 {
