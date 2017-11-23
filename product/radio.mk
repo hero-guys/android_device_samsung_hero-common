@@ -1,9 +1,7 @@
 # Init Resources
 PRODUCT_PACKAGES += \
 	init.baseband.rc \
-	init.baseband.sh \
-	init.rilchip.rc \
-	init.rilcommon.rc
+	init.baseband.sh 
 
 # Packages
 PRODUCT_PACKAGES += \
