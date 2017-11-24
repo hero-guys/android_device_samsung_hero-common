@@ -12,7 +12,6 @@ PRODUCT_PACKAGES += \
 	libril \
 	libprotobuf-cpp-full \
 	libsecril-client \
-	libsecril-client-sap \
 	android.hardware.radio@1.0 \
 	android.hardware.radio.deprecated@1.0 \
 	modemloader \
