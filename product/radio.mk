@@ -1,12 +1,13 @@
 # Init Resources
 PRODUCT_PACKAGES += \
 	init.baseband.rc \
-	init.baseband.sh 
+	init.baseband.sh \
+	init.rilchip.rc \
+	init.rilcommon.rc
 
 # Packages
 PRODUCT_PACKAGES += \
 	libxml2 \
-	rild \
 	libreference-ril \
 	libril \
 	libprotobuf-cpp-full \
@@ -19,10 +20,6 @@ PRODUCT_PACKAGES += \
 # Permissions
 PRODUCT_COPY_FILES += \
 	frameworks/native/data/etc/android.hardware.telephony.gsm.xml:system/etc/permissions/android.hardware.telephony.gsm.xml
-
-# rild.rc
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/rild.rc:system/vendor/etc/init/rild.rc
 
 # Properties
 PRODUCT_PROPERTY_OVERRIDES += \
