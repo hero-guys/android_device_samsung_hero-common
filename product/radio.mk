@@ -8,14 +8,11 @@ PRODUCT_PACKAGES += \
 # Packages
 PRODUCT_PACKAGES += \
 	libxml2 \
-	libreference-ril \
-	libril \
 	libprotobuf-cpp-full \
 	libsecril-client \
 	android.hardware.radio@1.0 \
 	android.hardware.radio.deprecated@1.0 \
-	modemloader \
-	libsec-ril-wrapper
+	modemloader
 
 # Permissions
 PRODUCT_COPY_FILES += \
