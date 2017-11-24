@@ -15,7 +15,8 @@ PRODUCT_PACKAGES += \
 	libsecril-client-sap \
 	android.hardware.radio@1.0 \
 	android.hardware.radio.deprecated@1.0 \
-	modemloader
+	modemloader \
+	libsec-ril-wrapper
 
 # Permissions
 PRODUCT_COPY_FILES += \
