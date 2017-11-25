@@ -36,7 +36,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 	ro.opengles.version=196609 \
 	ro.sf.lcd_density=560
 
-# Properties - HWC - not used on cm/aosp
+# Properties - HWC - not used on lineage/aosp
 PRODUCT_PROPERTY_OVERRIDES += \
 	debug.hwc.winupdate=1 \
 	debug.hwc.otf=1
