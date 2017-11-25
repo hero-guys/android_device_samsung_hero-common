@@ -146,8 +146,6 @@ on boot
     chmod 755 /sys/kernel/debug
     chown system system /sys/kernel/debug
 
-    export LD_SHIM_LIBS "/system/bin/gpsd|/system/lib64/gpsd_shim.so"
-
     # Set up kernel tracing, but disable it by default
     chmod 0222 /sys/kernel/debug/tracing/trace_marker
     write /sys/kernel/debug/tracing/tracing_on 0
@@ -677,12 +675,6 @@ on property:ro.debuggable=1
 on property:ro.bootmode=charger
     wait /dev/block/platform/155a0000.ufs/by-name/EFS
     mount ext4 /dev/block/platform/155a0000.ufs/by-name/EFS /efs nosuid nodev noatime noauto_da_alloc,discard,journal_async_commit,errors=panic
-
-# cpufreq parameters
-/sys/devices/system/cpu/cpu*   cpufreq/scaling_governor         0664    system  system
-/sys/devices/system/cpu/cpu*   cpufreq/scaling_max_freq         0664    system  system
-/sys/devices/system/cpu/cpu*   cpufreq/scaling_min_freq         0664    system  system
-
 
 on charger
 # Set cpu governor to powersave while in charging mode
