@@ -30,3 +30,10 @@ LOCAL_MODULE := libsensoreventq
 LOCAL_MODULE_TAGS := optional
 include $(BUILD_SHARED_LIBRARY)
 
+include $(CLEAR_VARS)
+LOCAL_SHARED_LIBRARIES := libhardware
+LOCAL_SRC_FILES := camparams.cpp
+LOCAL_MODULE := libcamhelpr
+LOCAL_MODULE_TAGS := optional
+include $(BUILD_SHARED_LIBRARY)
+
