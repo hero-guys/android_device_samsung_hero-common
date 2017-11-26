@@ -15,7 +15,7 @@
  */
 #include <hardware/hardware.h>
 
-static const char* process_name = "unknown";
+static const char* process_name = "system_server";
 extern "C" const char*
 get_process_name(void) {
   return process_name;
