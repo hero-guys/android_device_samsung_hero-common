@@ -190,5 +190,8 @@ BOARD_NFC_HAL_SUFFIX := universal8890
 # Sensors
 TARGET_NO_SENSOR_PERMISSION_CHECK := true
 
+# Fingerprint sensor
+TARGET_SEC_FP_HAL_VARIANT := bauth
+
 # Inherit from the proprietary version
 -include vendor/samsung/hero-common/BoardConfigVendor.mk

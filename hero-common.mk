@@ -132,6 +132,13 @@ PRODUCT_COPY_FILES += \
   $(LOCAL_PATH)/configs/gps/gps.xml:system/etc/gps.xml \
   frameworks/native/data/etc/android.hardware.location.gps.xml:system/etc/permissions/android.hardware.location.gps.xml
 
+# Fingerprint sensor
+PRODUCT_PACKAGES += \
+  fingerprintd \
+  fingerprint.exynos5
+PRODUCT_COPY_FILES += \
+  frameworks/native/data/etc/android.hardware.fingerprint.xml:system/etc/permissions/android.hardware.fingerprint.xml
+
 # Property overrides
 -include $(LOCAL_PATH)/system_prop.mk
 
