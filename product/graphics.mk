@@ -5,7 +5,8 @@ PRODUCT_PACKAGES += \
 	android.hardware.graphics.allocator@2.0-impl \
 	android.hardware.graphics.allocator@2.0-service \
 	android.hardware.graphics.composer@2.1-impl \
-	android.hardware.graphics.mapper@2.0-impl
+	android.hardware.graphics.mapper@2.0-impl \
+	libhwc2on1adapter
 
 # RenderScript HAL
 PRODUCT_PACKAGES += \
@@ -14,7 +15,6 @@ PRODUCT_PACKAGES += \
 # DRM
 PRODUCT_PACKAGES += \
 	android.hardware.drm@1.0-impl \
-	libhwc2on1adapter
 #	libion
 #	gralloc.exynos5
 
@@ -30,9 +30,7 @@ PRODUCT_COPY_FILES += \
 # Properties
 PRODUCT_PROPERTY_OVERRIDES += \
 	ro.bq.gpu_to_cpu_unsupported=1 \
-	ro.opengles.version=196609 \
 	debug.hwc.force_gpu=1 \
-	ro.bq.gpu_to_cpu_unsupported=1 \
 	ro.opengles.version=196609 \
 	ro.sf.lcd_density=560
 
