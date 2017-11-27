@@ -136,6 +136,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
   frameworks/native/data/etc/android.hardware.fingerprint.xml:system/etc/permissions/android.hardware.fingerprint.xml
 
+# Lights
+PRODUCT_PACKAGES += \
+  lights.universal8890
+
 # Property overrides
 -include $(LOCAL_PATH)/system_prop.mk
 
