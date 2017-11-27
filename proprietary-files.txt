@@ -175,3 +175,16 @@ etc/nfc/sec_s3nrn81_rfreg.bin
 lib/hw/nfc_nci.universal8890.so
 lib64/hw/nfc_nci.universal8890.so
 vendor/firmware/nfc/sec_s3nrn81_firmware.bin
+
+# Sensors
+bin/lhd
+bin/bcm_sensorhub_a1.patch
+lib/hw/sensorhubs.universal8890.so
+lib64/hw/sensorhubs.universal8890.so
+lib/hw/sensors.universal8890.so
+lib64/hw/sensors.universal8890.so
+lib/libsensorservice.so
+lib64/libsensorservice.so
+lib64/libagc_max.so
+lib64/libmaxflicker.so
+lib64/libhr.so
