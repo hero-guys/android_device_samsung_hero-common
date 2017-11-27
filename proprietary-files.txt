@@ -206,3 +206,11 @@ vendor/lib/libMcRegistry.so
 vendor/lib64/libMcRegistry.so
 vendor/lib/libMcClient.so
 vendor/lib64/libMcClient.so
+
+# Fingerprint
+app/mcRegistry/ffffffff00000000000000000000000e.tlbin
+app/mcRegistry/ffffffffd0000000000000000000000e.tlbin
+lib64/libbauthserver.so
+lib64/libbauthtzcommon.so
+lib64/libegis_fp_normal_sensor_test.so
+lib64/libsynaFpSensorTestNwd.so

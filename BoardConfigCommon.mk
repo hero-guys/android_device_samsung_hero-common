@@ -149,6 +149,9 @@ BOARD_NFC_HAL_SUFFIX := universal8890
 # Sensors
 TARGET_NO_SENSOR_PERMISSION_CHECK := true
 
+# Fingerprint sensor
+TARGET_SEC_FP_HAL_VARIANT := bauth
+
 # Inherit SLSI specific defines
 ifeq ($(WITH_SLSI_BSP),true)
 -include $(LOCAL_PATH)/BoardConfigSLSI.mk
