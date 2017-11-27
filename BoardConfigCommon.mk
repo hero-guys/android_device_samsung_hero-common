@@ -193,5 +193,11 @@ TARGET_NO_SENSOR_PERMISSION_CHECK := true
 # Fingerprint sensor
 TARGET_SEC_FP_HAL_VARIANT := bauth
 
+# Lights
+RED_LED_PATH := "/sys/class/leds/led_r/brightness"
+GREEN_LED_PATH := "/sys/class/leds/led_g/brightness"
+BLUE_LED_PATH := "/sys/class/leds/led_b/brightness"
+BACKLIGHT_PATH := "/sys/class/backlight/panel/brightness"
+
 # Inherit from the proprietary version
 -include vendor/samsung/hero-common/BoardConfigVendor.mk
