@@ -197,3 +197,12 @@ lib/libwrappergps.so
 lib64/libwrappergps.so
 lib/libfloatingfeature.so
 lib64/libfloatingfeature.so
+
+# TEE
+app/FFFFFFFF000000000000000000000001.drbin
+app/mcRegistry/ffffffffd00000000000000000000016.tlbin
+bin/mcDriverDaemon
+vendor/lib/libMcRegistry.so
+vendor/lib64/libMcRegistry.so
+vendor/lib/libMcClient.so
+vendor/lib64/libMcClient.so
