@@ -217,3 +217,9 @@ lib64/libsec-ril-dsds.so
 lib/libsecnativefeature.so
 lib64/libsecnativefeature.so
 -sbin/cbd:rootfs
+
+# NFC
+etc/nfc/sec_s3nrn81_rfreg.bin
+lib/hw/nfc_nci.universal8890.so
+lib64/hw/nfc_nci.universal8890.so
+vendor/firmware/nfc/sec_s3nrn81_firmware.bin

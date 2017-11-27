@@ -184,5 +184,8 @@ BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(LOCAL_PATH)/configs/bluetooth
 # Radio
 BOARD_RIL_CLASS := ../../../$(LOCAL_PATH)/ril
 
+# NFC
+BOARD_NFC_HAL_SUFFIX := universal8890
+
 # Inherit from the proprietary version
 -include vendor/samsung/hero-common/BoardConfigVendor.mk
