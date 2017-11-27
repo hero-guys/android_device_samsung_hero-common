@@ -187,5 +187,8 @@ BOARD_RIL_CLASS := ../../../$(LOCAL_PATH)/ril
 # NFC
 BOARD_NFC_HAL_SUFFIX := universal8890
 
+# Sensors
+TARGET_NO_SENSOR_PERMISSION_CHECK := true
+
 # Inherit from the proprietary version
 -include vendor/samsung/hero-common/BoardConfigVendor.mk
