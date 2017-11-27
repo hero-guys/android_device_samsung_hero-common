@@ -54,3 +54,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
   ro.ril.telephony.mqanelements=6 \
   telephony.lteOnGsmDevice=1 \
   telephony.lteOnCdmaDevice=0
+
+# NFC
+PRODUCT_PROPERTY_OVERRIDES += \
+  ro.nfc.sec_hal=true \
+  ro.nfc.port="I2C"

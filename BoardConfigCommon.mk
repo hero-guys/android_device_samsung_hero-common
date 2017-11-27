@@ -143,6 +143,9 @@ BOARD_CUSTOM_BT_CONFIG := $(LOCAL_PATH)/configs/bluetooth/libbt_vndcfg.txt
 # Radio
 BOARD_RIL_CLASS := ../../../$(LOCAL_PATH)/ril
 
+# NFC
+BOARD_NFC_HAL_SUFFIX := universal8890
+
 # Inherit SLSI specific defines
 ifeq ($(WITH_SLSI_BSP),true)
 -include $(LOCAL_PATH)/BoardConfigSLSI.mk
