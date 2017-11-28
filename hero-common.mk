@@ -139,6 +139,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
   frameworks/native/data/etc/android.hardware.fingerprint.xml:system/etc/permissions/android.hardware.fingerprint.xml
 
+# Keys
+PRODUCT_COPY_FILES += \
+  $(LOCAL_PATH)/configs/keylayout/gpio-keys.kl:/system/usr/keylayout/gpio-keys.kl \
+  $(LOCAL_PATH)/configs/keylayout/sec_touchkey.kl:/system/usr/keylayout/sec_touchkey.kl
+
 # Lights
 PRODUCT_PACKAGES += \
   lights.universal8890
