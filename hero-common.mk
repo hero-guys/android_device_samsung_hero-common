@@ -143,6 +143,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
   lights.universal8890
 
+# Power
+PRODUCT_PACKAGES += \
+  power.universal8890
+
 # Property overrides
 -include $(LOCAL_PATH)/system_prop.mk
 
