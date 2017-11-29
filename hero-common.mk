@@ -31,6 +31,17 @@ PRODUCT_PACKAGES += \
   charger_res_images \
   cm_charger_res_images
 
+# Display
+PRODUCT_AAPT_CONFIG := xlarge
+PRODUCT_AAPT_PREF_CONFIG := xxxhdpi
+PRODUCT_AAPT_PREBUILT_DPI := xxxhdpi xxhdpi xhdpi hdpi
+PRODUCT_PACKAGES += \
+  libion \
+  libfimg
+PRODUCT_COPY_FILES += \
+  frameworks/native/data/etc/android.hardware.vulkan.level-0.xml:system/etc/permissions/android.hardware.vulkan.level.xml \
+  frameworks/native/data/etc/android.hardware.vulkan.version-1_0_3.xml:system/etc/permissions/android.hardware.vulkan.version.xml
+
 # Property overrides
 -include $(LOCAL_PATH)/system_prop.mk
 

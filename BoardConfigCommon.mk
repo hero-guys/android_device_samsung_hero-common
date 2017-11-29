@@ -104,5 +104,29 @@ BOARD_CHARGER_ENABLE_SUSPEND := true
 BOARD_CHARGER_SHOW_PERCENTAGE := true
 CHARGING_ENABLED_PATH := /sys/class/power_supply/battery/batt_lp_charging
 
+# Display
+TARGET_SCREEN_HEIGHT := 2560
+TARGET_SCREEN_WIDTH := 1440
+BOARD_EGL_CFG := device/samsung/hero-common/configs/egl.cfg
+BOARD_USES_EXYNOS5_COMMON_GRALLOC := true
+
+# H/W composer
+USE_OPENGL_RENDERER := true
+NUM_FRAMEBUFFER_SURFACE_BUFFERS := 3
+BOARD_USES_VPP := true
+BOARD_USES_VPP_V2 := true
+BOARD_HDMI_INCAPABLE := true
+
+# Scaler
+BOARD_USES_DEFAULT_CSC_HW_SCALER := true
+BOARD_USES_DT := true
+BOARD_USES_SCALER_M2M1SHOT := true
+BOARD_USES_SCALER_LOCAL_CID := true
+BOARD_USES_SCALER_PREMUL_FMT := true
+
+# FIMG
+BOARD_USES_SKIA_FIMGAPI := true
+BOARD_USES_FIMGAPI_V5X := true
+
 # Inherit from the proprietary version
 -include vendor/samsung/hero-common/BoardConfigVendor.mk
