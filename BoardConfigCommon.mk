@@ -131,5 +131,9 @@ BOARD_USES_FIMGAPI_V5X := true
 # Audio
 TARGET_AUDIOHAL_VARIANT := samsung
 
+# Camera
+BOARD_USE_SAMSUNG_CAMERAFORMAT_NV21 := true
+TARGET_USES_UNIVERSAL_LIBHWJPEG := true
+
 # Inherit from the proprietary version
 -include vendor/samsung/hero-common/BoardConfigVendor.mk
