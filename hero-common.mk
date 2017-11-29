@@ -3,6 +3,8 @@
 
 LOCAL_PATH := device/samsung/hero-common
 
+DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
+
 # Device
 PRODUCT_PACKAGES += \
   frameworks/native/data/etc/handheld_core_hardware.xml:system/etc/permissions/handheld_core_hardware.xml
