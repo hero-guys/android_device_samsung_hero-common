@@ -21,6 +21,7 @@ PRODUCT_PACKAGES += \
 	libwpa_client \
 	wpa_supplicant \
 	wpa_supplicant.conf \
+    android.hardware.wifi@1.0-supplicant \
 	android.hardware.wifi@1.0-service \
 	android.hardware.wifi@1.0 \
 	android.hardware.wifi@1.0-impl

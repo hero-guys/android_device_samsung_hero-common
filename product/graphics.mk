@@ -5,9 +5,11 @@ PRODUCT_PACKAGES += \
 	android.hardware.graphics.allocator@2.0-impl \
 	android.hardware.graphics.allocator@2.0-service \
 	android.hardware.graphics.composer@2.1-impl \
+	android.hardware.graphics.composer@2.1-service \
 	android.hardware.graphics.mapper@2.0-impl \
+    android.hardware.configstore@1.0-service \
 	libhwc2on1adapter
-#	libExynosHWCService 
+#	libExynosHWCService
 #	libion
 #	gralloc.exynos5
 
@@ -17,7 +19,8 @@ PRODUCT_PACKAGES += \
 
 # DRM
 PRODUCT_PACKAGES += \
-	android.hardware.drm@1.0-impl
+	android.hardware.drm@1.0-impl \
+	android.hardware.drm@1.0-service
 
 # Not shims you are looking for
 PRODUCT_PACKAGES += \
@@ -52,6 +55,5 @@ PRODUCT_PROPERTY_OVERRIDES += \
 #	debug.hwc.winupdate=1 \
 #	ro.hardware.egl=mali \
 #	debug.hwui.use_buffer_age=false \
-#	persist.sys.ui.hw=true 
+#	persist.sys.ui.hw=true
 #
-
