@@ -4,3 +4,5 @@ import /efs/factory.prop
 # boot device
 ro.boot.bootdevice=155a0000.ufs
 
+# Google Assistant
+ro.opa.eligible_device=true
