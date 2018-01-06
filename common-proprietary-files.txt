@@ -127,6 +127,8 @@ lib64/libfloatingfeature.so
 # Graphics
 vendor/lib/egl/libGLES_mali.so
 vendor/lib64/egl/libGLES_mali.so
+lib/libvulkan.so
+lib64/libvulkan.so
 # symlink created by Android.mk: vendor/lib/hw/vulkan.exynos5.so
 # symlink created by Android.mk: vendor/lib64/hw/vulkan.exynos5.so
 # symlink created by Android.mk: vendor/lib/libOpenCL.so.1.1
