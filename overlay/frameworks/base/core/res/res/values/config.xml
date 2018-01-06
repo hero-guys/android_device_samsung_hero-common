@@ -278,7 +278,4 @@ Add a comment to this line
     <!-- If true, the doze component is not started until after the screen has been
          turned off and the screen off animation has been performed. -->
     <bool name="config_dozeAfterScreenOff">true</bool>
-    <!-- If enabled, capacitive keys will only light up when pressed.
-     Otherwise, the buttons will light up whenever the user interacts with the device -->
-    <bool name="config_buttonLightOnKeypressOnly">true</bool>
 </resources>
