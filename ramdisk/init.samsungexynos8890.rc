@@ -262,6 +262,15 @@ on boot
     chown system system /sys/devices/system/cpu/cpu4/cpufreq/interactive/io_is_busy
     chmod 0660 /sys/devices/system/cpu/cpu4/cpufreq/interactive/io_is_busy
 
+    # Allow to access HMP-settings
+    chown system system /sys/kernel/hmp/boost
+    chown system system /sys/kernel/hmp/semiboost
+    chown system system /sys/kernel/hmp/active_down_migration
+    chown system system /sys/kernel/hmp/aggressive_up_migration
+    chown system system /sys/kernel/hmp/sb_down_threshold
+    chown system system /sys/kernel/hmp/sb_up_threshold
+
+
     # MSP Core Status
     chown system system /sys/devices/system/cpu/cpu1/online
     chown system system /sys/devices/system/cpu/cpu2/online
@@ -459,6 +468,7 @@ on fs
     chown system radio /sys/class/fingerprint/fingerprint/type_check
     chown system radio /sys/class/fingerprint/fingerprint/name
     chown system radio /sys/class/fingerprint/fingerprint/vendor
+    chown system radio /sys/class/fingerprint/fingerprint/wakelocks_enabled
 
 # Accelerometer_sensor
     chown system radio /sys/class/sensors/accelerometer_sensor/raw_data
